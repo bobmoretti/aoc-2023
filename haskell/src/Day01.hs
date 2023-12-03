@@ -2,7 +2,6 @@ module Day01 where
 
 import Data.Char
 import Data.List
-import Data.Maybe
 import Data.Maybe (catMaybes)
 import Paths_aoc2023 (getDataFileName)
 import Text.Printf (printf)
@@ -14,10 +13,10 @@ day01 = do
   printf "part 2: %d\n" (part2 inputLines)
 
 part1 :: [String] -> Int
-part1 lines =
+part1 ls =
   let digits = filter isDigit
       firstAndLast line = read [head (digits line), last (digits line)]
-   in sum $ map firstAndLast lines :: Int
+   in sum $ map firstAndLast ls :: Int
 
 nameToDigit :: String -> Maybe Int
 nameToDigit name
