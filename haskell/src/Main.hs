@@ -4,7 +4,9 @@ module Main where
 
 import Data.String (String)
 import Day01 (day01)
+import Day02 (day02)
 import System.Environment (getArgs)
+
 
 main :: IO ()
 main = do
@@ -15,5 +17,5 @@ main = do
 run args =
   case args of
     1 -> day01
-    -- 2 : _ -> day02
+    2 -> day02
     _ -> error "None or invalid day number provided."
